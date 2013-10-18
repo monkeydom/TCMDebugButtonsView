@@ -132,8 +132,6 @@
 	[button setTitle:aTitle forState:UIControlStateNormal];
 	button.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin;
 	button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Condensed" size:16.0];
-	button.titleLabel.shadowColor = [UIColor blackColor];
-	button.titleLabel.shadowOffset = CGSizeMake(0,2);
 	button.titleLabel.adjustsFontSizeToFitWidth = YES;
 	[button sizeToFit];
 	buttonRect.size.width = CGRectGetWidth(button.frame) + 18.0;
