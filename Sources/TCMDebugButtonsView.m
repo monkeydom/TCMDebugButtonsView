@@ -30,6 +30,14 @@
 	return CGSizeMake(2., 10.);
 }
 
+- (void)setAdditionalInsetFromEdge:(CGFloat)additionalInsetFromEdge {
+	if (!additionalInsetFromEdge == _additionalInsetFromEdge) {
+		
+	}
+	_additionalInsetFromEdge = additionalInsetFromEdge;
+	[self takeInset];
+}
+
 - (id)initWithSuperview:(UIView *)aSuperview edge:(CGRectEdge)anEdge {
 	CGRect frame = aSuperview.bounds;
 	frame.size.height = CGRectGetHeight([self.class buttonBaseBounds]) + [self.class buttonDistance].height * 2;
@@ -55,6 +63,10 @@
 		[self addDebugButtonWithTitle:@"Hide" target:self action:@selector(hide:)];
     }
     return self;
+}
+
+- (void)takeInset {
+	self.transform = CGAffineTransformMakeTranslation(0, (self.edge == CGRectMinYEdge ? 1 : -1) * self.additionalInsetFromEdge);
 }
 
 - (void)layoutButtons {
@@ -91,7 +103,7 @@
 		if (idx>0) aView.hidden = YES;
 	}];
 	UIButton *hideShowButton = self.elementsArray[0];
-	[hideShowButton setTitle:@"show" forState:UIControlStateNormal];
+	[hideShowButton setTitle:@"Show" forState:UIControlStateNormal];
 	[hideShowButton removeTarget:self action:NULL forControlEvents:UIControlEventAllEvents];
 	[hideShowButton addTarget:self action:@selector(show:) forControlEvents:UIControlEventTouchUpInside];
 
@@ -105,7 +117,7 @@
 		if (idx>0) aView.hidden = NO;
 	}];
 	UIButton *hideShowButton = self.elementsArray[0];
-	[hideShowButton setTitle:@"hide" forState:UIControlStateNormal];
+	[hideShowButton setTitle:@"Hide" forState:UIControlStateNormal];
 	[hideShowButton removeTarget:self action:NULL forControlEvents:UIControlEventAllEvents];
 	[hideShowButton addTarget:self action:@selector(hide:) forControlEvents:UIControlEventTouchUpInside];
 	
@@ -120,8 +132,6 @@
 	[button setTitle:aTitle forState:UIControlStateNormal];
 	button.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin;
 	button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Condensed" size:16.0];
-	button.titleLabel.shadowColor = [UIColor blackColor];
-	button.titleLabel.shadowOffset = CGSizeMake(0,2);
 	button.titleLabel.adjustsFontSizeToFitWidth = YES;
 	[button sizeToFit];
 	buttonRect.size.width = CGRectGetWidth(button.frame) + 18.0;
