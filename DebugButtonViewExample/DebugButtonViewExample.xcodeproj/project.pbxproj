@@ -120,17 +120,8 @@
 		F257A46E18117A4500F9B73B /* DebugButtonViewExample */ = {
 			isa = PBXGroup;
 			children = (
-				F257A47718117A4500F9B73B /* EXPAppDelegate.h */,
-				F257A47818117A4500F9B73B /* EXPAppDelegate.m */,
-				F257A47A18117A4500F9B73B /* Main_iPhone.storyboard */,
-				F257A47D18117A4500F9B73B /* Main_iPad.storyboard */,
-				F257A48018117A4500F9B73B /* EXPViewController.h */,
-				F257A48118117A4500F9B73B /* EXPViewController.m */,
-				F257A4A318117D8500F9B73B /* EXPNestedViewController.h */,
-				F257A4A418117D8500F9B73B /* EXPNestedViewController.m */,
-				F257A4A018117AB700F9B73B /* TCMDebugButtonsView.h */,
-				F257A4A118117AB700F9B73B /* TCMDebugButtonsView.m */,
-				F257A48318117A4500F9B73B /* Images.xcassets */,
+				F257A4A6181189A200F9B73B /* Debug Buttons View */,
+				F257A4A7181189BD00F9B73B /* Example View Controllers */,
 				F257A46F18117A4500F9B73B /* Supporting Files */,
 			);
 			path = DebugButtonViewExample;
@@ -139,6 +130,11 @@
 		F257A46F18117A4500F9B73B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F257A48318117A4500F9B73B /* Images.xcassets */,
+				F257A47718117A4500F9B73B /* EXPAppDelegate.h */,
+				F257A47818117A4500F9B73B /* EXPAppDelegate.m */,
+				F257A47A18117A4500F9B73B /* Main_iPhone.storyboard */,
+				F257A47D18117A4500F9B73B /* Main_iPad.storyboard */,
 				F257A47018117A4500F9B73B /* DebugButtonViewExample-Info.plist */,
 				F257A47118117A4500F9B73B /* InfoPlist.strings */,
 				F257A47418117A4500F9B73B /* main.m */,
@@ -163,6 +159,26 @@
 				F257A49318117A4500F9B73B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F257A4A6181189A200F9B73B /* Debug Buttons View */ = {
+			isa = PBXGroup;
+			children = (
+				F257A4A018117AB700F9B73B /* TCMDebugButtonsView.h */,
+				F257A4A118117AB700F9B73B /* TCMDebugButtonsView.m */,
+			);
+			name = "Debug Buttons View";
+			sourceTree = "<group>";
+		};
+		F257A4A7181189BD00F9B73B /* Example View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F257A48018117A4500F9B73B /* EXPViewController.h */,
+				F257A48118117A4500F9B73B /* EXPViewController.m */,
+				F257A4A318117D8500F9B73B /* EXPNestedViewController.h */,
+				F257A4A418117D8500F9B73B /* EXPNestedViewController.m */,
+			);
+			name = "Example View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +424,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DebugButtonViewExample/DebugButtonViewExample-Prefix.pch";
 				INFOPLIST_FILE = "DebugButtonViewExample/DebugButtonViewExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -421,6 +438,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DebugButtonViewExample/DebugButtonViewExample-Prefix.pch";
 				INFOPLIST_FILE = "DebugButtonViewExample/DebugButtonViewExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

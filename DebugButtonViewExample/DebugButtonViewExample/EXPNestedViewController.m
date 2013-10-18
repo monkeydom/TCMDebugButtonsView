@@ -43,7 +43,7 @@
 	self.view.TCM_debugButtonsView.additionalInsetFromEdge = 20.0;
 	
 	// add debug button to change dismiss
-	// remember to only use weak references, to not cause implicid retains with blocks
+	// remember to only use weak references, to not cause implicit retains with blocks
 	__weak __typeof__(self) self_weak = self;
 	[self.view TCM_addDebugButtonWithTitle:@"Dismiss"  block:^{
 		[self_weak dismissViewControllerAnimated:YES
