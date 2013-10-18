@@ -30,6 +30,14 @@
 	return CGSizeMake(2., 10.);
 }
 
+- (void)setAdditionalInsetFromEdge:(CGFloat)additionalInsetFromEdge {
+	if (!additionalInsetFromEdge == _additionalInsetFromEdge) {
+		
+	}
+	_additionalInsetFromEdge = additionalInsetFromEdge;
+	[self takeInset];
+}
+
 - (id)initWithSuperview:(UIView *)aSuperview edge:(CGRectEdge)anEdge {
 	CGRect frame = aSuperview.bounds;
 	frame.size.height = CGRectGetHeight([self.class buttonBaseBounds]) + [self.class buttonDistance].height * 2;
@@ -55,6 +63,10 @@
 		[self addDebugButtonWithTitle:@"Hide" target:self action:@selector(hide:)];
     }
     return self;
+}
+
+- (void)takeInset {
+	self.transform = CGAffineTransformMakeTranslation(0, (self.edge == CGRectMinYEdge ? 1 : -1) * self.additionalInsetFromEdge);
 }
 
 - (void)layoutButtons {

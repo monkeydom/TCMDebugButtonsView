@@ -26,6 +26,9 @@
 - (IBAction)hide:(id)aSender;
 - (IBAction)show:(id)aSender;
 
+/** use e.g. 20.0 to show below the status bar if on top */
+@property (nonatomic) CGFloat additionalInsetFromEdge;
+
 @end
 
 @interface UIView (TCMDebugButtonAdditions)

@@ -39,6 +39,9 @@
 	// want the debug view to be on the top
 	[self.view TCM_addDebugButtonsViewOnEdge:CGRectMinYEdge];
 	
+	// add inset to compensate for status bar
+	self.view.TCM_debugButtonsView.additionalInsetFromEdge = 20.0;
+	
 	// add debug button to change dismiss
 	// remember to only use weak references, to not cause implicid retains with blocks
 	__weak __typeof__(self) self_weak = self;
