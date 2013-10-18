@@ -60,6 +60,10 @@ To use it you just add ``TCMDebugButtonsView.h`` and ``TCMDebugButtonsView.m`` t
 ### 1.0 
 * initial release
 
+## License
+
+* [MIT](http://www.opensource.org/licenses/mit-license.php)
+
 ## Created by
 @monkeydom [twitter](http://twitter.com/monkeydom) [adn](http://alpha.app.net/monkeydom)
 of [TheCodingMonkeys](http://codingmonkeys.de)
