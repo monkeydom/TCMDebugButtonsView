@@ -103,7 +103,7 @@
 		if (idx>0) aView.hidden = YES;
 	}];
 	UIButton *hideShowButton = self.elementsArray[0];
-	[hideShowButton setTitle:@"show" forState:UIControlStateNormal];
+	[hideShowButton setTitle:@"Show" forState:UIControlStateNormal];
 	[hideShowButton removeTarget:self action:NULL forControlEvents:UIControlEventAllEvents];
 	[hideShowButton addTarget:self action:@selector(show:) forControlEvents:UIControlEventTouchUpInside];
 
@@ -117,7 +117,7 @@
 		if (idx>0) aView.hidden = NO;
 	}];
 	UIButton *hideShowButton = self.elementsArray[0];
-	[hideShowButton setTitle:@"hide" forState:UIControlStateNormal];
+	[hideShowButton setTitle:@"Hide" forState:UIControlStateNormal];
 	[hideShowButton removeTarget:self action:NULL forControlEvents:UIControlEventAllEvents];
 	[hideShowButton addTarget:self action:@selector(hide:) forControlEvents:UIControlEventTouchUpInside];
 	
