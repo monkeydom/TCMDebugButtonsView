@@ -1,4 +1,4 @@
-# TCMDebugButtonView - a handy little view to put debug buttons in
+# TCMDebugButtonView - easily add debug buttons to your iOS app
 
 ## Purpose
 * speed up the process of providing a user reachable button for features during development
