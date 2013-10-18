@@ -23,7 +23,7 @@ To use it you just add ``TCMDebugButtonsView.h`` and ``TCMDebugButtonsView.m`` t
 	// the first call to TCM_addDebugButton… creates the debug button view implicitly
 	
 	// example one: add debug button to change the background color using blocks
-	// remember to only use weak references, to not cause implicid retains with blocks
+	// remember to only use weak references, to not cause implicit retains with blocks
 	__weak __typeof__(self) self_weak = self;
 	[self.view TCM_addDebugButtonWithTitle:@"Red Background"  block:^{
 		self_weak.view.backgroundColor = [UIColor redColor];
@@ -45,7 +45,7 @@ To use it you just add ``TCMDebugButtonsView.h`` and ``TCMDebugButtonsView.m`` t
 	[self.view TCM_addDebugButtonsViewOnEdge:CGRectMinYEdge];
 
 	// add debug button to change dismiss
-	// remember to only use weak references, to not cause implicid retains with blocks
+	// remember to only use weak references, to not cause implicit retains with blocks
 	__weak __typeof__(self) self_weak = self;
 	[self.view TCM_addDebugButtonWithTitle:@"Dismiss"  block:^{
 		[self_weak dismissViewControllerAnimated:YES
