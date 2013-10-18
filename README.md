@@ -11,7 +11,15 @@
 * ARC
 
 ## Example Usage
-To use it you just add ``TCMDebugButtonsView.h`` and ``TCMDebugButtonsView.m`` to your project and add a ``#import TCMDebugButtonsView.h"`` to either your precompiled header, or in every file you want to use it.
+To use it you just add ``TCMDebugButtonsView.h`` and ``TCMDebugButtonsView.m`` to your project.
+
+Add ``#import TCMDebugButtonsView.h"`` to either your precompiled header, or in every file you want to use it.
+
+Use either ``-[UIView TCM_addDebugButtonWithTitle:(NSString *)aTitle block:(void (^)(void)aBlock)]``
+
+or ``-[UIView TCM_addDebugButtonWithTitle:(NSString *)aTitle target:(id)aTarget action:(SEL)anAction]``
+
+to add named buttons to a view.
 
 
 ```
@@ -31,7 +39,6 @@ To use it you just add ``TCMDebugButtonsView.h`` and ``TCMDebugButtonsView.m`` t
 	
 	// example two: add debug button to change the background back to white using target/action
 	[self.view TCM_addDebugButtonWithTitle:@"White Background" target:self action:@selector(whiteBackgroundAction)];
-	
 	
 	// example three: add debug button do present a view controller
 	[self.view TCM_addDebugButtonWithTitle:@"Present View Controller"  block:^{
