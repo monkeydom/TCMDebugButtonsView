@@ -198,7 +198,7 @@
 
 @end
 
-static const void *DEBUG_VIEW_ASSOC_KEY;
+static const void *DEBUG_VIEW_ASSOC_KEY = &DEBUG_VIEW_ASSOC_KEY;
 
 @implementation UIView (TCMDebugButtonAdditions)
 - (TCMDebugButtonsView *)TCM_debugButtonsViewInternal {
