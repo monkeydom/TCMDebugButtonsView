@@ -16,11 +16,11 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+	if (self) {
+		// Custom initialization
+	}
+	return self;
 }
 
 - (UIColor *)initialBackgroundColor {
@@ -45,20 +45,20 @@
 	// add debug button to change dismiss
 	// remember to only use weak references, to not cause implicit retains with blocks
 	__weak __typeof__(self) self_weak = self;
-	[self.view TCM_addDebugButtonWithTitle:@"Dismiss"  block:^{
+	[self.view TCM_addDebugButtonWithTitle:@"Dismiss" block:^{
 		[self_weak dismissViewControllerAnimated:YES
 									  completion:NULL];
 	}];
 	
 	
-    [super viewDidLoad];
+	[super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	[super didReceiveMemoryWarning];
+	// Dispose of any resources that can be recreated.
 }
 
 @end
