@@ -31,11 +31,10 @@
 }
 
 - (void)setAdditionalInsetFromEdge:(CGFloat)additionalInsetFromEdge {
-	if (!additionalInsetFromEdge == _additionalInsetFromEdge) {
-		
+	if (additionalInsetFromEdge != _additionalInsetFromEdge) {
+		_additionalInsetFromEdge = additionalInsetFromEdge;
+		[self takeInset];
 	}
-	_additionalInsetFromEdge = additionalInsetFromEdge;
-	[self takeInset];
 }
 
 - (id)initWithSuperview:(UIView *)aSuperview edge:(CGRectEdge)anEdge {
