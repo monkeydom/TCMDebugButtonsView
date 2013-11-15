@@ -64,6 +64,10 @@ to add named buttons to a view.
 ![Example Debug Button View](http://f.cl.ly/items/2R3b3r0M1W0O1h0N3p1Z/DebugButtonView.jpg)
 
 ## Releases
+### 1.0.1
+* fixed missing initialization for associated object key - thanks to jou for pointing that out
+* fixed mixed spaces/tabs whitespace
+
 ### 1.0 
 * initial release
 

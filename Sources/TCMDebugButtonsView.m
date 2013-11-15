@@ -31,18 +31,17 @@
 }
 
 - (void)setAdditionalInsetFromEdge:(CGFloat)additionalInsetFromEdge {
-	if (!additionalInsetFromEdge == _additionalInsetFromEdge) {
-		
+	if (additionalInsetFromEdge != _additionalInsetFromEdge) {
+		_additionalInsetFromEdge = additionalInsetFromEdge;
+		[self takeInset];
 	}
-	_additionalInsetFromEdge = additionalInsetFromEdge;
-	[self takeInset];
 }
 
 - (id)initWithSuperview:(UIView *)aSuperview edge:(CGRectEdge)anEdge {
 	CGRect frame = aSuperview.bounds;
 	frame.size.height = CGRectGetHeight([self.class buttonBaseBounds]) + [self.class buttonDistance].height * 2;
-    self = [super initWithFrame:frame];
-    if (self) {
+	self = [super initWithFrame:frame];
+	if (self) {
 		_elementsArray = [NSMutableArray new];
 		_buttonBlocks = [NSMutableArray new];
 		_edge = anEdge;
@@ -61,8 +60,8 @@
 		[aSuperview addSubview:self];
 		// needs a superview for orientation
 		[self addDebugButtonWithTitle:@"Hide" target:self action:@selector(hide:)];
-    }
-    return self;
+	}
+	return self;
 }
 
 - (void)takeInset {
@@ -198,7 +197,7 @@
 
 @end
 
-static const void *DEBUG_VIEW_ASSOC_KEY;
+static const void *DEBUG_VIEW_ASSOC_KEY = &DEBUG_VIEW_ASSOC_KEY;
 
 @implementation UIView (TCMDebugButtonAdditions)
 - (TCMDebugButtonsView *)TCM_debugButtonsViewInternal {
